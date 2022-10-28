@@ -27,12 +27,12 @@ const listStudents = [
   }
 ]
 
-for(let index = 0; index < listStudents.length; index++) {
-  let average = calcAverage(listStudents[index].note1, listStudents[index].note2)
+for(let list of listStudents) {
+  let average = calcAverage(list.note1, list.note2)
 
   if (average < 70) {
-    alert(`A média do(a) aluno(a) ${listStudents[index].name} é: ${average} \nNão foi dessa vez, ${listStudents[index].name}! Tente novamente!`)
+    alert(`A média do(a) aluno(a) ${list.name} é: ${average} \nNão foi dessa vez, ${list.name}! Tente novamente!`)
   } else {
-    alert(`A média do(a) aluno(a) ${listStudents[index].name} é: ${average} \nParabéns, ${listStudents[index].name}! Você foi aprovado(a) no concurso!`)
+    alert(`A média do(a) aluno(a) ${list.name} é: ${average} \nParabéns, ${list.name}! Você foi aprovado(a) no concurso!`)
   }
 }
